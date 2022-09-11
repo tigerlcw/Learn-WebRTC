@@ -8,8 +8,9 @@ app.set('view engine', 'pug');
 app.set('views', __dirname + '/src/views');
 
 app.use('/public', express.static(__dirname + '/src/public'));
-
 app.get('/', (req, res) => res.render('home'));
+app.get('/*', (req, res) => res.render('/')); // 기본 url 설정
+
 const handleListening = () =>
   // listening 설정
   console.log(`Listening on: http://localhost:3000`);
