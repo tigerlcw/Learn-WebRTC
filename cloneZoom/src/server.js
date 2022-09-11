@@ -20,4 +20,11 @@ const handleListening = () =>
 
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server }); // http, ws server 동시 실행
+
+// ws 부분
+function handleConnection(socket) {
+  console.log(socket);
+}
+wss.on('connection', handleConnection);
+
 server.listen(3000, handleListening);
