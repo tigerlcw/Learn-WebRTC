@@ -1,3 +1,5 @@
 cloneZoom/node_modules
 
 cloneZoom/package-lock.json
+
+.DS_Store
